@@ -23,6 +23,67 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+ 	<!-- ********************** Header ********************** -->
+	<header class="header">
+		<!-- Container for header content -->
+		<div class="container">
+			<!-- Logo section -->
+			<a href="#" class="logo">
+				<img src="./assets/logo.png" width="364" height="58" alt="logo">
+			</a>
+
+			<!-- Search view container, including search input and results -->
+			<div class="search-view" data-search-view>
+				<!-- Search input and controls -->
+				<div class="search-wrapper">
+					<!-- Search input field -->
+					<input type="search" name="search" id="" class="search-field" placeholder="Search city..." autocomplete="off" data-search-field>
+
+					<!-- Icon for search action -->
+					<span class="m-icon">Search</span>
+
+					<!-- Button to close search, with an icon -->
+					<button class="icon-btn leading-icon has-state" aria-label="close search" data-search-toggler>
+						<span class="m-icon">arrow_back</span>
+					</button>
+				</div>
+
+				<!-- Container for search results -->
+				<div class="search-result" data-search-result>
+					<ul class="view-list" data-search-list>
+						<li class="view-item">
+							<!-- Icon indicating location -->
+							<span class="m-icon">location_on</span>
+
+							<div>
+								<!-- Title and subtitle for search result item -->
+								<p class="item-title">London</p>
+								<p class="label-2 item-subtitle">State of London GB</p>
+							</div>
+
+							<!-- Link for selecting search result, triggers search toggler -->
+							<a href="#" class="item-link has-state" data-search-toggler=""></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Header action buttons -->
+			<div class="header-actions">
+				<!-- Button to open search view, with a search icon -->
+				<button class="icon-btn has-state" aria-label="open search" data-search-toggler>
+					<span class="m-icon icon">search</span>
+				</button>
+
+				<!-- Button to go to current location, with a location icon -->
+				<a href="#/current-location" class="btn-primary has-state" data-current-location-btn disabled>
+					<span class="m-icon">my_location</span>
+					<span class="span">Current Location</span>
+				</a>
+			</div>
+		</div>
+	</header>
+
     
 
     <!-- JavaScript link -->
