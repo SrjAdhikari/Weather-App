@@ -533,6 +533,60 @@ position: relative;                                 /* Relative positioning for 
 
 
 /*-----------------------------------*\
+    #MAIN
+\*-----------------------------------*/
+
+/* Set the height of the main element to full viewport height minus 80px */
+main {
+    height: calc(100vh - 80px);     /* For standard viewport height */
+    height: calc(100svh - 80px);    /* For small viewport height (modern browsers) */
+    overflow: hidden;               /* Hide any overflow content */
+}
+
+/* Style for the article container */
+article.container {
+    position: relative;                     /* Position relative to allow absolute positioning of child elements */
+    display: grid;                          /* Use grid layout for the container */
+    grid-template-columns: minmax(0, 1fr);  /* Single column grid with flexible width */
+    gap: 20px;                              /* Space between grid items */
+    height: 100%;                           /* Full height of the parent element */
+    overflow-y: overlay;                    /* Enable overlay scrollbar (for smooth scrolling) */
+}
+
+/* Custom style for the scrollbar thumb */
+article.container::-webkit-scrollbar-thumb {
+    background-color: transparent;          /* Make scrollbar thumb transparent by default */
+}
+
+/* Style for scrollbar thumb when container is hovered or focused */
+article.container:is(:hover, :focus, :focus-within):-webkit-scrollbar-thumb {
+    background-color: var(--white-alpha-8); /* Set thumb color on interaction */
+}
+
+/* Style for the scrollbar button (up and down arrows) */
+article.container::-webkit-scrollbar-button {
+    height: 10px;                           /* Set height of scrollbar buttons */
+}
+
+/* Add a gradient overlay at the bottom of the container */
+article.container::before {
+    content: "";                            /* Empty content for the pseudo-element */
+    position: fixed;                        /* Fixed position to stay at the bottom during scroll */
+    bottom: 0;                              /* Align at the bottom of the viewport */
+    width: 100%;                            /* Full width of the container */
+    height: 40px;                           /* Height of the gradient overlay */
+    background-image: var(--gradient-1);    /* Background gradient */
+    pointer-events: none;                   /* Prevent interaction with the overlay */
+    z-index: 1;                             /* Ensure it appears above other content */
+}
+
+/* Add margin to all sections except the last one */
+section:not(:last-child) {
+    margin-block-end: 16px;                 /* Space below sections */
+}
+
+
+/*-----------------------------------*\
     #CURRENT WEATHER
 \*-----------------------------------*/
 
