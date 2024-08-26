@@ -76,7 +76,7 @@
 				</button>
 
 				<!-- Button to go to current location, with a location icon -->
-				<a href="#/current-location" class="btn-primary has-state" data-current-location-btn disabled>
+				<a href="#/current-location" class="btn-primary has-state" data-current-location-btn>
 					<span class="m-icon">my_location</span>
 					<span class="span">Current Location</span>
 				</a>
@@ -84,7 +84,50 @@
 		</div>
 	</header>
 
-    
+
+    <!-- ********************** Main ********************** -->
+	<main>
+		<article class="container">
+			<div class="content-left">
+				<!-- ********** CURRENT WEATHER ********** -->
+				<!-- Section for displaying current weather information -->
+				<section class="section current-weather" aria-label="current-weather" data-current-weather>
+					<!-- Card component for displaying current weather details -->
+					<div class="card card-lg current-weather-card">
+						<!-- Title for the current weather card -->
+						<h2 class="title-2 card-title">Now</h2>
+						
+						<!-- Wrapper for weather information -->
+						<div class="weapper">
+							<!-- Current temperature -->
+							<p class="heading">25°c</p>
+						</div>
+						
+						<!-- Weather icon representing the current weather condition -->
+						<img src="./assets/01d.png" width="64" height="64" alt="Overcast Clouds" class="weather-icon">
+						
+						<!-- Description of the current weather condition -->
+						<p class="body-3">Overcast Clouds</p>
+						
+						<!-- List of additional meta information -->
+						<ul class="meta-list">
+							<!-- Meta item for date -->
+							<li class="meta-item">
+								<span class="m-icon">calendar_today</span>
+								<p class="title-3 meta-text">Monday 26, Aug</p>
+							</li>
+							
+							<!-- Meta item for location -->
+							<li class="meta-item">
+								<span class="m-icon">location_on</span>
+								<p class="title-3 meta-text">London, GB</p>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</div>
+		</article>
+	</main>
 
     <!-- JavaScript link -->
     <script src="./script/app.js"></script>
