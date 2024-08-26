@@ -309,6 +309,74 @@ sub, sup {
     display: none;
 }
 
+/* Base style for card components, setting background color and text color */
+.card {
+    background-color: var(--surface);  /* Sets the card's background color using the surface variable */
+    color: var(--on-surface);          /* Sets the card's text color using the on-surface variable */
+}
+
+/* Large card variation with extra padding and a larger border radius */
+.card-lg {
+    padding: 20px;                      /* Adds padding inside the card */
+    border-radius: var(--radius-28);    /* Applies a border radius using a predefined variable */
+}
+
+/* Small card variation with less padding and a smaller border radius */
+.card-sm {
+    padding: 16px;                      /* Adds padding inside the card */
+    border-radius: var(--radius-16);    /* Applies a smaller border radius using a predefined variable */
+}
+
+/* Base style for headings, overriding the default text color and setting size */
+.heading {
+    color: var(--white);                /* Sets the heading text color to white */
+    font-size: var(--heading);          /* Applies a large font size for headings using a predefined variable */
+    line-height: 1.1;                   /* Sets line height for headings to make them more compact */
+}
+
+/* Title level 1 with a specific font size */
+.title-1 {
+    font-size: var(--title-1);          /* Applies the largest title font size using a predefined variable */
+}
+
+/* Title level 2 with a specific font size and bottom margin */
+.title-2 {
+    font-size: var(--title-2);          /* Applies a slightly smaller title font size */
+    margin-block-end: 12px;             /* Adds space below the title for better separation */
+}
+
+/* Title level 3 with a specific font size and semi-bold font weight */
+.title-3 {
+    font-size: var(--title-3);          /* Applies a medium-sized title font size */
+    font-weight: var(--weight-semiBold);/* Sets the font weight to semi-bold for emphasis */
+}
+
+/* Body text level 1 with a specific font size */
+.body-1 {
+    font-size: var(--body-1);           /* Applies a font size for primary body text */
+}
+
+/* Body text level 2 with a specific font size and semi-bold font weight */
+.body-2 {
+    font-size: var(--body-2);           /* Applies a slightly smaller font size for secondary body text */
+    font-weight: var(--weight-semiBold);/* Sets the font weight to semi-bold */
+}
+
+/* Body text level 3 with a smaller font size */
+.body-3 {
+    font-size: var(--body-3);           /* Applies the smallest font size for tertiary body text */
+}
+
+/* Label text level 1 with a specific font size */
+.label-1 {
+    font-size: var(--label-1);          /* Applies a font size for primary labels */
+}
+
+/* Label text level 2 with a smaller font size */
+.label-2 {
+    font-size: var(--label-2);          /* Applies a smaller font size for secondary labels */
+}
+
 
 /*-----------------------------------*\
     #HEADER
