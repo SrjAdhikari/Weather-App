@@ -196,6 +196,119 @@ sub, sup {
     #REUSED STYLE
 \*-----------------------------------*/
 
+/* - Sets the maximum width of the container to 1600px and ensures it takes full width within its parent.
+    - Centers the container horizontally by setting margin-inline to auto.
+    - Adds padding of 16px on all sides for inner spacing.
+*/
+.container {
+    max-width: 1600px;
+    width: 100%;
+    margin-inline: auto;
+    padding: 16px;
+}
+
+/*
+    - Styles a button element for icons with a background color that is semi-transparent.
+    - Defines fixed dimensions (48px by 48px) for the button.
+    - Uses Flexbox to center content both horizontally and vertically.
+    - Applies a circular border radius for rounded corners.
+*/
+.icon-btn {
+    background-color: var(--white-alpha-8);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: grid;
+    place-items: center; */
+    border-radius: var(--radius-circle);
+}
+
+.has-state {
+    position: relative;
+}
+
+.has-state:hover {
+    box-shadow: var(--shadow-1);
+}
+
+/* - Removes box-shadow when the element is focused or focus-visible for accessibility purposes. */
+.has-state:is(:focus, :focus-visible) {
+    box-shadow: none;
+}
+
+/*
+    - Creates a pseudo-element for additional styling effects.
+    - Positioned absolutely to cover the parent element.
+    - Uses clip-path to create a circular effect that transitions on hover and focus.
+*/
+.has-state::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    clip-path: circle(100% at 50% 50%);
+    transition: var(--transition-short);
+}
+
+/* - Changes the background color of the pseudo-element on hover. */
+.has-state:hover::before {
+    background-color: var(--white-alpha-4);
+}
+
+/* - Changes the background color when the element is focused or focus-visible and triggers a ripple animation. */
+.has-state:is(:focus, :focus-visible) ::before {
+    background-color: var(--white-alpha-8);
+    animation: ripple 250ms ease forwards;
+}
+
+/*
+    Defines the ripple animation that expands from the center of the element.
+    - 0%: The clip-path starts at 0% size, centered.
+    - 100%: The clip-path expands to 100% size, filling the element.
+*/
+@keyframes ripple {
+    0% {
+        clip-path: circle(0% at 505 50%);
+    }
+    100% {
+        clip-path: circle(100% at 505 50%);
+    }
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--on-primary);
+    height: 48px;
+    line-height: 48px;
+    max-width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-inline: 16px;
+    border-radius: var(--radius-pill);
+}
+
+.btn-primary .span {
+    font-weight: var(--weight-semiBold);
+}
+
+/*
+    - Styles the button when disabled, changing its background color and text color.
+    - Sets the cursor to not-allowed to indicate the button is inactive.
+*/
+.btn-primary[disabled] {
+    background-color: var(--outline);
+    color:var(--on-surface-variant);
+    cursor: not-allowed;
+}
+
+/* - Removes the ::before pseudo-element (if any) when the button is disabled. */
+.btn-primary[disabled]::before {
+    display: none;
+}
+
 
 /*-----------------------------------*\
     #HEADER
