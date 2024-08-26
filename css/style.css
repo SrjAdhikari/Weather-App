@@ -590,6 +590,48 @@ section:not(:last-child) {
     #CURRENT WEATHER
 \*-----------------------------------*/
 
+/* Style for the wrapper inside the current weather card */
+.current-weather-card .weapper {
+    margin-block: 12px;     /* Add vertical margin (top and bottom) of 12px */
+    display: flex;          /* Use flexbox layout for the wrapper */
+    align-items: center;    /* Align items vertically in the center */
+    gap: 8px;               /* Space of 8px between flex items */
+}
+
+/* Style for the weather icon inside the current weather card */
+.current-weather-card .weather-icon {
+    margin-inline: auto;    /* Center the weather icon horizontally */
+}
+
+/* Style for text within the body-3 class of the current weather card */
+.current-weather-card > .body-3 {
+    text-transform: capitalize; /* Capitalize the first letter of each word in the text */
+}
+
+/* Style for the meta list inside the current weather card */
+.current-weather-card .meta-list {
+    margin-block-start: 16px;                       /* Add top margin of 16px before the list */
+    padding-block-start: 16px;                      /* Add top padding of 16px inside the list */
+    border-block-start: 1px solid var(--outline);   /* Add a 1px solid border at the top using the outline color */
+}
+
+/* Style for individual meta items inside the meta list */
+.current-weather-card .meta-item {
+    display: flex;          /* Use flexbox layout for the meta items */
+    align-items: center;    /* Align items vertically in the center */
+    gap: 8px;               /* Space of 8px between flex items */
+}
+
+/* Style for meta items, excluding the last one */
+.current-weather-card .meta-item:not(:last-child) {
+    margin-block-end: 12px; /* Add bottom margin of 12px to all items except the last one */
+}
+
+/* Style for the text inside meta items */
+.current-weather-card .meta-text {
+    color: var(--on-surface-variant); /* Set text color to a variant of the surface color */
+}
+
 
 /*-----------------------------------*\
     #HIGHLIGHTS
