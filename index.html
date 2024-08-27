@@ -125,6 +125,180 @@
 						</ul>
 					</div>
 				</section>
+
+				<!-- ********** FORECAST ********** -->
+				<section class="section forecast" aria-labelledby="forecast-label" data-5-day-forecast>
+					<!-- Heading for the 5-day forecast section -->
+					<h2 class="title-2" id="forecast-label">5 Days Forecast</h2>
+
+					<!-- Container for the forecast cards -->
+					<div class="card card-lg forecast-card">
+						<ul>
+							<!-- Each list item represents a day in the 5-day forecast -->
+							<li class="card-item">
+								<div class="icon-wrapper">
+									<!-- Weather icon and temperature -->
+									<img src="./assets/01n.png" alt="Overcast Clouds" width="36" height="36" class="weather-icon">
+									<span class="span">
+										<p class="title-2">25</p>
+									</span>
+								</div>
+
+								<!-- Date and day of the week -->
+								<p class="label-1">27 Aug</p>
+								<p class="label-1">Tuesday</p>
+							</li>
+
+							<!-- Repeat similar structure for other days -->
+							<li class="card-item">
+								<div class="icon-wrapper">
+									<img src="./assets/01n.png" alt="Overcast Clouds" width="36" height="36" class="weather-icon">
+									<span class="span">
+										<p class="title-2">25</p>
+									</span>
+								</div>
+								<p class="label-1">27 Aug</p>
+								<p class="label-1">Tuesday</p>
+							</li>
+
+							<li class="card-item">
+								<div class="icon-wrapper">
+									<img src="./assets/01n.png" alt="Overcast Clouds" width="36" height="36" class="weather-icon">
+									<span class="span">
+										<p class="title-2">25</p>
+									</span>
+								</div>
+								<p class="label-1">27 Aug</p>
+								<p class="label-1">Tuesday</p>
+							</li>
+
+							<li class="card-item">
+								<div class="icon-wrapper">
+									<img src="./assets/01n.png" alt="Overcast Clouds" width="36" height="36" class="weather-icon">
+									<span class="span">
+										<p class="title-2">25</p>
+									</span>
+								</div>
+								<p class="label-1">27 Aug</p>
+								<p class="label-1">Tuesday</p>
+							</li>
+
+							<li class="card-item">
+								<div class="icon-wrapper">
+									<img src="./assets/01n.png" alt="Overcast Clouds" width="36" height="36" class="weather-icon">
+									<span class="span">
+										<p class="title-2">25</p>
+									</span>
+								</div>
+								<p class="label-1">27 Aug</p>
+								<p class="label-1">Tuesday</p>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+				<!-- ********** HIGHLIGHTS ********** -->
+				<section class="section highlights" aria-labelledby="highlights-label" data-highlights>
+					<!-- Container for today's highlights -->
+					<div class="card card-lg">
+						<h2 class="title-2" id="highlights-label">Today's Highlights</h2>
+
+						<!-- List of highlight cards -->
+						<div class="highlight-list">
+							<!-- Card for Air Quality Index -->
+							<div class="card card-sm highlight-card one">
+								<h3 class="title-3">Air Quality Index</h3>
+								<div class="wrapper">
+									<span class="m-icon">air</span>
+
+									<ul class="card-list">
+										<!-- List items for different PM values -->
+										<li class="card-item">
+											<p class="title-1">23.3</p>
+											<p class="title-1">PM <sub>2.5</sub></p>
+										</li>
+
+										<li class="card-item">
+											<p class="title-1">23.3</p>
+											<p class="title-1">PM <sub>2.5</sub></p>
+										</li>
+
+										<li class="card-item">
+											<p class="title-1">23.3</p>
+											<p class="title-1">PM <sub>2.5</sub></p>
+										</li>
+
+										<li class="card-item">
+											<p class="title-1">23.3</p>
+											<p class="title-1">PM <sub>2.5</sub></p>
+										</li>
+									</ul>
+								</div>
+								<span class="badge aqi-1 label-1" title="aqi message">Good</span> <!-- Air quality badge -->
+							</div>
+
+							<!-- Card for Sunrise & Sunset times -->
+							<div class="card card-sm highlight-card two">
+								<h3 class="title-3">Sunrise & Sunset</h3>
+
+								<div class="card-list">
+									<div class="card-item">
+										<span class="m-icon">clear_day</span>
+										<div>
+											<p class="label-1">Sunrise</p>
+											<p class="label-1">6:30 AM</p>
+										</div>
+									</div>
+									
+									<div class="card-item">
+										<span class="m-icon">clear_night</span>
+										<div>
+											<p class="label-1">Sunset</p>
+											<p class="label-1">5:54 PM</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Card for Humidity -->
+							<div class="card card-sm highlight-card">
+								<h3 class="title-3">Humidity</h3>
+								<div class="wrapper">
+									<spna class="m-icon">humidity_percentage</spna>
+									<p class="title-1">35<sub>%</sub></p>
+								</div>
+							</div>
+
+							<!-- Card for Pressure -->
+							<div class="card card-sm highlight-card">
+								<h3 class="title-3">Pressure</h3>
+								<div class="wrapper">
+									<spna class="m-icon">airwave</spna>
+									<p class="title-1">1052<sub>hPa</sub></p>
+								</div>
+							</div>
+
+							<!-- Card for Visibility -->
+							<div class="card card-sm highlight-card">
+								<h3 class="title-3">Visibility</h3>
+								<div class="wrapper">
+									<spna class="m-icon">visibility</spna>
+									<p class="title-1">10<sub>km</sub></p>
+								</div>
+							</div>
+
+							<!-- Card for Feels Like -->
+							<div class="card card-sm highlight-card">
+								<h3 class="title-3">Feels Like</h3>
+								<div class="wrapper">
+									<spna class="m-icon">thermostat</spna>
+									<p class="title-1">25&deg;<sub>c</sub></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
 			</div>
 		</article>
 	</main>
