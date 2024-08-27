@@ -811,6 +811,37 @@ section:not(:last-child) {
     margin-block: 12px;     /* Adds space above and below the icon */
 }
 
+/*-----------------------------------*\
+    #FOOTER
+\*-----------------------------------*/
+
+/* Styling for the footer section */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px 24px;
+    color: var(--on-surface-variant);
+    text-align: center;
+    margin-block-start: 28px;
+}
+
+/* Styling for the last child in the footer with the class 'body-3' */
+.footer .body-3:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Hide the footer when the parent has the 'fade-in' class */
+.fade-in .footer {
+    display: none;
+}
+
+
 
 /*-----------------------------------*\
     #LOADING
@@ -819,11 +850,6 @@ section:not(:last-child) {
 
 /*-----------------------------------*\
     #ERROR SECTION
-\*-----------------------------------*/
-
-
-/*-----------------------------------*\
-    #FOOTER
 \*-----------------------------------*/
 
 
