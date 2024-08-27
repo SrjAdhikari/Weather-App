@@ -573,6 +573,7 @@ article.container::before {
     content: "";                            /* Empty content for the pseudo-element */
     position: fixed;                        /* Fixed position to stay at the bottom during scroll */
     bottom: 0;                              /* Align at the bottom of the viewport */
+    left: 0;
     width: 100%;                            /* Full width of the container */
     height: 40px;                           /* Height of the gradient overlay */
     background-image: var(--gradient-1);    /* Background gradient */
@@ -763,6 +764,52 @@ section:not(:last-child) {
 /*-----------------------------------*\
     #FORECAST
 \*-----------------------------------*/
+
+/* Container for the forecast slider, enabling horizontal scrolling */
+.slider-container {
+    overflow-x: auto;       /* Allows horizontal scrolling */
+    margin-inline: -16px;   /* Negative margin to extend the container to the edges */
+}
+
+/* Hide scrollbar for the forecast slider on WebKit browsers (e.g., Chrome, Safari) */
+.slider-container::-webkit-scrollbar { 
+    display: none; 
+}
+
+/* Display the slider items in a horizontal row with spacing between them */
+.slider-list {
+    display: flex;
+    gap: 12px; /* Space between each slider item */
+}
+
+/* Add margin to the bottom of the first slider list for separation */
+.slider-list:first-child { 
+    margin-block-end: 16px;
+}
+
+/* Add empty space before and after the slider list for better alignment */
+.slider-list::before,
+.slider-list::after {
+    content: "";
+    min-width: 4px; /* Ensure there's a minimum width of space */
+}
+
+/* Define minimum width for each slider item and allow it to grow */
+.slider-item {
+    min-width: 110px;   /* Ensures each item is at least 110px wide */
+    flex: 1 1 100%;     /* Flexbox properties to distribute space */
+}
+
+/* Center-align text within each slider card */
+.slider-card { 
+    text-align: center;
+}
+
+/* Center the weather icon within each slider item */
+.slider-item .weather-icon {
+    margin-inline: auto;    /* Centers horizontally */
+    margin-block: 12px;     /* Adds space above and below the icon */
+}
 
 
 /*-----------------------------------*\
