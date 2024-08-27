@@ -675,6 +675,90 @@ section:not(:last-child) {
     #HOURLY FORECAST
 \*-----------------------------------*/
 
+/* Set a larger font size for icons within the .highlights section */
+.highlights .m-icon {
+    font-size: 3.2rem;
+}
+
+/* Create a grid layout for the highlight list with 20px gaps between items */
+.highlight-list {
+    display: grid;
+    gap: 20px;
+}
+
+/* Style the title with a color and margin at the bottom within the highlight list */
+.highlight-list .title-3 {
+    color: var(--on-surface-variant);
+    margin-block-end: 20px;
+}
+
+/* Style small cards within the .highlights section with a background color and relative positioning */
+.highlights .card-sm {
+    background-color: var(--black-alpha-10);
+    position: relative;
+}
+
+/* Flexbox layout applied to .wrapper, .card-list, and .card-item elements within the .highlight-card */
+.highlight-card :is(.wrapper, .card-list, .card-item) {
+    display: flex;
+    align-items: center;
+}
+
+/* Space between elements inside .wrapper and align them horizontally */
+.highlight-card .wrapper {
+    justify-content: space-between;
+    gap: 16px;
+}
+
+/* Wrap and align items within .card-list and allow them to grow */
+.highlight-card .card-list {
+    flex-wrap: wrap;
+    flex-grow: 1;
+    row-gap: 8px;
+}
+
+/* Set card items to take up 50% width, align to the right, and add a small gap */
+.highlight-card .card-item {
+    width: 50%;
+    justify-content: flex-end;
+    gap: 4px;
+}
+
+/* Style label text within the .highlight-card with a specific color */
+.highlight-card .label-1 {
+    color: var(--on-surface-variant);
+}
+
+/* General styling for badges with absolute positioning, padding, and rounded corners */
+.badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 2px 12px;
+    border-radius: var(--radius-pill);
+    font-weight: var(--weight-semiBold);
+    cursor: help;
+}
+
+/* Badge color variations based on air quality index (AQI) levels */
+.badge.aqi-1 { background-color: var(--bg-aqi-1); color: var(--on-bg-aqi-1); }
+.badge.aqi-2 { background-color: var(--bg-aqi-2); color: var(--on-bg-aqi-2); }
+.badge.aqi-3 { background-color: var(--bg-aqi-3); color: var(--on-bg-aqi-3); }
+.badge.aqi-4 { background-color: var(--bg-aqi-4); color: var(--on-bg-aqi-4); }
+.badge.aqi-5 { background-color: var(--bg-aqi-5); color: var(--on-bg-aqi-5); }
+
+/* Additional styling for .highlight-card.two elements to adjust alignment and spacing */
+.highlight-card.two .card-item {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+}
+
+/* Adjust the margin at the bottom for labels within .highlight-card.two */
+.highlight-card.two .label-1 {
+    margin-block-end: 4px;
+}
+
 
 /*-----------------------------------*\
     #FORECAST
