@@ -637,6 +637,39 @@ section:not(:last-child) {
     #HIGHLIGHTS
 \*-----------------------------------*/
 
+/* Removes the bottom margin from the .title-2 element inside .forecast-card */
+.forecast-card .title-2 {
+    margin-bottom: 0;
+}
+
+/* Applies flexbox layout to .card-item and .icon-wrapper elements inside .forecast-card */
+.forecast-card :is(.card-item, .icon-wrapper) {
+    display: flex;               /* Uses flexbox for layout */
+    align-items: center;         /* Aligns items vertically at the center */
+}
+
+/* Adds bottom margin to .card-item elements inside .forecast-card, except the last one */
+.forecast-card .card-item:not(:last-child) {
+    margin-bottom: 12px;         /* Space below each card item */
+}
+
+/* Adds a gap between items inside .icon-wrapper within .forecast-card */
+.forecast-card .icon-wrapper {
+    gap: 8px;                    /* Space between items in the icon wrapper */
+}
+
+/* Sets the text color and font weight for .label-1 elements inside .forecast-card */
+.forecast-card .label-1 {
+    color: var(--on-surface-variant);       /* Text color based on the theme variable */
+    font-weight: var(--weight-semiBold);    /* Font weight based on the theme variable */
+}
+
+/* Aligns the text of .label-1 elements to the right and ensures full width inside .card-item within .forecast-card */
+.forecast-card .card-item > .label-1 {
+    width: 100%;                  /* Takes up full width of its parent */
+    text-align: right;            /* Aligns text to the right */
+}
+
 
 /*-----------------------------------*\
     #HOURLY FORECAST
