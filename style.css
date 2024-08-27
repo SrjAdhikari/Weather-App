@@ -1,0 +1,189 @@
+/* Universal reset to remove default margin and padding from all elements */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;                  /* Use flexbox layout */
+    justify-content: center;        /* Center horizontally */
+    align-items: center;            /* Center vertically */
+    height: 100vh;                  /* Set body height to 100% of the viewport height */
+    margin: 0;                      /* Remove default margin */
+    background-color: #fcfcf7;
+    overflow: hidden;               /* Prevent scrollbars */
+}
+
+.app-container {
+    width: 70%;                     /* Set the container width */
+    max-width: 500px;               /* Maximum width */
+    color: #fff;
+    background: linear-gradient(135deg, #3f7979, #000000);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 20px;                  /* Add padding inside the container */
+    text-align: center;             /* Center-align the text inside the container */
+}
+
+
+/* Styling the main heading inside the container */
+.app-container h1 {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+/* Styling the search section */
+.search {
+    margin-bottom: 20px;
+}
+
+/* Styling the search input field */
+.search input {
+    border: none;
+    outline: none;
+    width: 65%;
+    padding: 10px; 
+    border-radius: 5px;
+    font-size: 13px;
+    letter-spacing: 0.03rem;
+}
+
+/* Styling the search button */
+.search button {
+    background: #fff;
+    color: #000;
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 25%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.03rem;
+    margin-left: 5px;
+}
+
+/* Styling the main details section with flexbox */
+.main-details {
+    display: flex;              /* Use flexbox for layout */
+    align-items: center;        /* Vertically align items */
+    justify-content: center;    /* Center items horizontally */
+}
+
+/* Styling the weather icon inside the main details section */
+.weather-icon {
+    width: 100px;               /* Set the icon width to 100px */
+    margin-left: 20px;
+}
+
+/* Styling the main information section */
+.main-info {
+    display: flex;              /* Use flexbox for layout */
+    flex-direction: column;     /* Arrange items vertically */
+    margin: 0 50px;      /* Add horizontal margins for spacing */
+}
+
+/* Styling the heading inside the main information section */
+.main-info h2 {
+    font-size: 35px;
+}
+
+/* Styling the paragraph inside the main information section */
+.main-info p {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+/* Styling the temperature information section */
+.temp-info {
+    text-align: left;
+}
+
+/* Styling the span inside the temperature information section */
+.temp-info p {
+    display: inline-block;
+    font-size: 11px;
+}
+
+/* Styling the additional information section with flexbox */
+.information {
+    display: flex;                      /* Use flexbox for layout */
+    justify-content: space-between;     /* Distribute space evenly between items */
+    align-items: center;                /* Vertically align items */
+    flex-wrap: wrap;                    /* Allow items to wrap to the next line if necessary */
+    margin: 20px 0;
+}
+
+/* Styling individual detail items in the additional information section */
+.details {
+    align-items: center;                /* Vertically align items */
+    text-align: left;                   /* Align text to the left */
+    margin: 10px;                       /* Add margin around each detail item */
+}
+
+/* Styling the images inside the details section */
+.details img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+/* Styling the text inside the details section */
+.details div {
+    text-align: left;
+    font-size: 13px;
+}
+
+/* Styling the forecast container for the 5-day forecast */
+#forecastContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #ffffff1a;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling individual forecast day blocks */
+.forecast-day {
+    width: 18%; /* Make sure it fits five blocks in a row */
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #0a475c, #2f80ed);
+    transition: background 0.3s ease;
+}
+
+/* Hover effect for forecast day blocks */
+.forecast-day:hover {
+    background: #2f80ed;
+}
+
+/* Styling the date inside each forecast day */
+.forecast-day h4 {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Styling the temperature inside each forecast day */
+.forecast-day h2 {
+    font-size: 20px;
+    margin: 10px 0 5px;
+    font-weight: 600;
+}
+
+/* Styling the weather description inside each forecast day */
+.forecast-day p {
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+/* Styling the weather image inside each forecast day */
+.forecast-day img {
+    width: 40px;
+    height: auto;
+}
